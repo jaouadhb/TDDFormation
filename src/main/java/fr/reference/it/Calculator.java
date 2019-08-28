@@ -5,21 +5,15 @@ import java.util.Stack;
 
 public class Calculator {
 
-    private Stack<BigDecimal> values = new Stack<BigDecimal>();
+    private OperandStack values = new OperandStack();
 
     public BigDecimal getAccumulator() {
-        if(values.empty())
-        {
-            return BigDecimal.ZERO;
-        }
         return values.peek();
     }
 
     public void setAccumulator(BigDecimal valueOf) {
-        if(!values.empty()){
-            values.pop();
-        }
-        values.push(valueOf);
+
+        values.replaceTOP(valueOf);
     }
 
     public void enter() {
