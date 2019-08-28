@@ -23,4 +23,14 @@ public class Calculator {
     public void drop() {
         values.pop();
     }
+
+    public void add() {
+        Operation addOperation = new AddOperation();
+        addOperation.apply(values);
+    }
+
+    public void subtruct() {
+        Operation subOperation = new SubOperation();
+        subOperation.apply(values);
+    }
 }
