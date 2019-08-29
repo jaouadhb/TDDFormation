@@ -10,6 +10,7 @@ public class FakeAccountDAOImpl implements UserAccountDAO {
     public FakeAccountDAOImpl() {
         users.put(new User("jaouad@mail.com"),new Account());
     }
+    @Override
     public String getUserPassword(User user) {
         return users.get(user).getPassword();
     }
