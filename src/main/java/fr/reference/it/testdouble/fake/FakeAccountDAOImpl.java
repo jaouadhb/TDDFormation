@@ -14,4 +14,9 @@ public class FakeAccountDAOImpl implements UserAccountDAO {
     public String getUserPassword(User user) {
         return users.get(user).getPassword();
     }
+
+    @Override
+    public void showPassword(String password) {
+        System.out.println(password);
+    }
 }

@@ -4,4 +4,6 @@ public interface UserAccountDAO {
 
     String getUserPassword(User user);
 
+
+    void showPassword(String password);
 }

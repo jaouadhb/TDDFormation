@@ -7,6 +7,10 @@ public class User {
         this.email = username;
     }
 
+    public User() {
+
+    }
+
     public String getEmail() {
         return email;
     }
